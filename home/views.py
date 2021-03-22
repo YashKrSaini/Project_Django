@@ -23,4 +23,14 @@ def update(request):
 def signupComplete(request):
     if request.method=="POST":
         name=request.POST['id']
-        return render(request,'signupComplete.html',{'name':name})
+        passWord=request.POST['pass']
+        rePass=request.POST['repass']
+        if (passWord==rePass and len(rePass)!=0):
+            try :
+                name=str(name.split()[0])
+            except :
+                pass
+            return render(request,'signupComplete.html',{'name':name})
+        else:
+            return render(request,'signupFailed.html')
+            pass
