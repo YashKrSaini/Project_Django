@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from home.models import userData
 
 # Create your views here.
 def index(request):
@@ -25,7 +26,12 @@ def signupComplete(request):
         name=request.POST['id']
         passWord=request.POST['pass']
         rePass=request.POST['repass']
+        email=request.POST['email_id']
+        dob=request.POST['dob']
+        image=request.POST['image']
         if (passWord==rePass and len(rePass)!=0):
+            ins =  userData(name=name,email=email,passWord=passWord ,dob=dob,image=image)
+            ins.save()
             try :
                 name=str(name.split()[0])
             except :
