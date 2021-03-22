@@ -19,7 +19,8 @@ and open the template in the editor.
                 <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_column"></div>
                 <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_main_column">
                     <h2>Login Form</h2>
-                    <form>
+                    <form action="" method="post">
+                        {% csrf_token %}
                         <div class="form-group">
                             Enter User Name:
                             <input type="text" class="form-control" name="id" value="User Id">
