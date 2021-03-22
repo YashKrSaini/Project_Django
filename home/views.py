@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-def home(request):
+def index(request):
     return render(request,'index.html')
 
 def login(request):
@@ -9,3 +9,4 @@ def login(request):
 
 def newlog(request):
     return render(request,'newlog.html')
+
