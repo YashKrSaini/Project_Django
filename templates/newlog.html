@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ToDo supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheet2.css'%}">
+    </head>
+    <body class="login_body_main">
+        <div class="login_body">
+            <div class="container">
+                <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_column"></div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_main_column">
+                    <h2>Login Form</h2>
+                    <form>
+                        <div class="form-group">
+                            Enter User Name:
+                            <input type="text" class="form-control" name="id" value="User Id">
+                            Enter Email Id:
+                            <input type="email" class="form-control" name="email_id" value="User Email">
+                            Enter DOB:
+                            <input type="date" class="form-control" name="dob" value="">
+                            
+                        </div>
+                        <div class="form-group login_password">
+                            Create Password:
+                            <input type="password" class="form-control" name="password">
+                            Renter Password:
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        
+                        <div>
+                            <button id="signup_button" class="buttonLOG">Sign Up</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_column"></div>
+            </div>
+            
+            <div class="navbar-fixed-bottom nav navbar">
+                <a href="{% url 'index"><button class="left_bottom_nav">&lt;- Back to Home</button></a>
+            </div>
+            
+        </div>
+    </body>
+</html>
