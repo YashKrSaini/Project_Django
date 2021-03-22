@@ -19,13 +19,13 @@ and open the template in the editor.
                 <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_column"></div>
                 <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_main_column">
                     <h2>Login Form</h2>
-                    <form action="" method="post">
+                    <form action="{% url 'signupComplete' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
                             Enter User Name:
-                            <input type="text" class="form-control" name="id" value="User Id">
+                            <input type="text" class="form-control" name="id" value="">
                             Enter Email Id:
-                            <input type="email" class="form-control" name="email_id" value="User Email">
+                            <input type="email" class="form-control" name="email_id" value="">
                             Enter DOB:
                             <input type="date" class="form-control" name="dob" value="">
                             

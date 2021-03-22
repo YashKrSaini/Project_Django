@@ -13,9 +13,14 @@ def newlog(request):
 
 def update(request):
     if request.method=="POST":
-        name=request.POST['name']
-        email=request.POST['email']
-        print(name,email,'<------')
+        name=request.POST['id']
+        email=request.POST['email_id']
+        # print(name,email,'<------') # Working Properly
         return render(request,'login.html')
     else:
         return render(request,'newlog.html')
+
+def signupComplete(request):
+    if request.method=="POST":
+        name=request.POST['id']
+        return render(request,'signupComplete.html',{'name':name})

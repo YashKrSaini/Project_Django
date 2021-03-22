@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Completed!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheet2.css'%}">
+</head>
+<body class="login_body_main">
+    <div class="login_body">
+        <div class="container">
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_column"></div>
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_main_column">
+                <h2>Congratulations {{name}} !Sign Up Complete </h2>
+                
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 cont_column"></div>
+        </div>
+        
+        <div class="navbar-fixed-bottom nav navbar">
+            <a href="{% url 'index' %}"><button class="left_bottom_nav">&lt;- Back to Home</button></a>
+        </div>
+        
+    </div>
+
+    
+    
+</body>
+</html>
