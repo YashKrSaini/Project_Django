@@ -7,7 +7,7 @@ class userData(models.Model):
     email=models.EmailField()
     dob=models.CharField(max_length=30)
     passWord=models.CharField(max_length=20)
-    image=models.ImageField(upload_to="" ,default="")
+    image=models.ImageField(upload_to="home/Images" ,default="")
     
     def __str__(self):
-        return (self.name+' : '+self.email)
+        return (self.name+' - '+self.email)

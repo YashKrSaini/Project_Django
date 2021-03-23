@@ -26,7 +26,10 @@ SECRET_KEY = 'debkeyslh-)kvos-vyajap(q!kp3uq0u=)gb6a(jdwd^8^j1-@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.43.55',
+    '127.0.0.1',
+]
 
 
 # Application definition
