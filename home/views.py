@@ -8,6 +8,22 @@ def index(request):
 def login(request):
     return render(request,'login.html')
 
+def loginResponse(request):
+    if (request.method=="POST"):
+        recv_email=request.POST['email_id']
+        recv_passWord=request.POST['passWord']
+        for user in userData.objects.all() :
+            print('---------------------->',user.name)
+            if (user.email==recv_email):
+                if (user.passWord==recv_passWord):
+                    # LOgin Succesfully
+                    return render(request,'loginResponse.html',{'status':'Succesfully',})
+                else:
+                    # PassWord Incorrect
+                    return render(request,'loginResponse.html',{'status':'Failed','reason':'Incorrect Password'})
+        return render(request,'loginResponse.html',{'status':'Failed','reason':'Incorrect Email Id'})
+
+
 def newlog(request):
     
     return render(request,'newlog.html')
@@ -39,4 +55,4 @@ def signupComplete(request):
             return render(request,'signupComplete.html',{'name':name})
         else:
             return render(request,'signupFailed.html')
-            pass
+            
